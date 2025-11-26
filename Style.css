@@ -966,3 +966,20 @@ main p {
         justify-content: center;
     }
 }
+
+/* Botón de Demo (ligeramente diferente) */
+.project-links a.demo-btn {
+    background: #ffe3ad;                     /* pastel amarillito */
+    color: #5a3d00;
+    border-color: #fff0c9;
+    box-shadow:
+        0 0 0 2px #e9c875,
+        3px 3px 0 0 #b68e2d;
+}
+
+.project-links a.demo-btn:hover {
+    background: #ffcd81;
+    box-shadow:
+        0 0 0 2px #e2b85f,
+        5px 5px 0 0 #a27423;
+}
