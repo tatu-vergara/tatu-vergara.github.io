@@ -21,8 +21,8 @@
     <div class="nav-inner">
         <!-- LOGO 8-bit -->
         <a href="#inicio" class="brand">
-            <span class="sprite-logo" aria-hidden="true"></span>
-            <span class="brand-text">Tatu</span>
+            <img src="imgs/knowledge1.png" alt="Logo Tatu" class="brand-logo">
+            <span class="brand-text">Tatu Vergara</span>
         </a>
 
 
@@ -38,7 +38,8 @@
         <nav class="nav-links">
             <a href="#inicio"  class="nav-link is-active">Inicio</a>
             <a href="#proyectos" class="nav-link">Proyectos</a>
-            <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+            <a href="#sobre-mi" class="nav-link">Sobre mI</a>
+            <a href="#musica" class="nav-link">MUSICA</a>
             <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
     </div>
@@ -47,31 +48,206 @@
 
 <main>
 
+<!-- INICIO -->
+<section id="inicio" class="hero">
+    <h1>Tatu Vergara</h1>
+    <h2>Desarrollo web · Audio · Música </h2>
 
-    <section id="inicio" style="height: 80vh; padding: 4rem 1.5rem;">
-        <h1>Inicio</h1>
-        <p>Contenido de inicio...</p>
-    </section>
+    <p class="hero-subtitle">
+        Desarrollo proyectos digitales.
+    </p>
 
-
-    <section id="proyectos" style="height: 80vh; padding: 4rem 1.5rem;">
-        <h2>Proyectos</h2>
-        <p>Contenido de proyectos...</p>
-    </section>
-
-
-    <section id="sobre-mi" style="height: 80vh; padding: 4rem 1.5rem;">
-        <h2>Sobre mí</h2>
-        <p>Contenido sobre mí...</p>
-    </section>
+    <a href="#proyectos" class="hero-button">Ver proyectos</a>
+</section>
 
 
-    <section id="contacto" style="height: 80vh; padding: 4rem 1.5rem;">
-        <h2>Contacto</h2>
-        <p>Contenido de contacto...</p>
-    </section>
+<!-- PROYECTOS -->
+<section id="proyectos" class="section">
+    <h2>Proyectos</h2>
+
+    <!-- CONTENEDOR DE LA GRILLA -->
+    <div class="projects-grid">
+
+        <!-- TARJETA 1 -->
+        <div class="project-card">
+            <h3 class="project-title">Tienda de Plug-ins de audio digital</h3>
+
+            <p class="project-desc">
+                Aplicación web hecha en Django que simula una tienda de plug-ins de audio.
+                Incluye catálogo filtrable por categorías, detalle de productos, carrito
+                de compras y panel de administración.
+            </p>
+
+            <div class="project-tags">
+                <span class="django">Django</span>
+                <span class="python">Python</span>
+                <span class="mysql">MySQL</span>
+                <span class="html">HTML</span>
+                <span class="css">CSS</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/tatu-vergara/tienda_plugins_django" target="_blank">
+                    Ver repositorio
+                </a>
+            </div>
+        </div>
+
+        <!-- TARJETA 2 -->
+        <div class="project-card">
+            <h3 class="project-title">CyberGumshoe</h3>
+
+            <p class="project-desc">
+                Sitio web temático inspirado en personajes de videojuegos.
+                Implementé un front-end limpio y funcional con HTML, CSS y JavaScript,
+                incluyendo navegación, modal interactivo y diseño centrado en
+                conceptos básicos de ciberseguridad.
+            </p>
+
+            <div class="project-tags">
+                <span class="html">HTML</span>
+                <span class="css">CSS</span>
+                <span class="javascript">JavaScript</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/tatu-vergara/CyberGumshoe" target="_blank">
+                    Ver repositorio
+                </a>
+            </div>
+        </div>
+
+    </div> <!-- cierre .projects-grid -->
+</section>
+
+<!-- about me -->
+<section id="sobre-mi" class="section section-status">
+    <h2>Sobre mí</h2>
+
+    <div class="rpg-panel">
+        <div class="rpg-portrait">
+            <img src="imgs/perfilpx2.png" alt="Foto de Tatu Vergara">
+        </div>
+
+        <div class="rpg-info">
+            <div class="rpg-header">
+                <span class="rpg-name">Tatu Vergara</span>
+                <span class="rpg-level">CLASS: Interdisciplina</span>
+            </div>
+
+            <div class="rpg-role">Music Producer / Dev Jr </div>
+
+            <div class="rpg-bars">
+                <div class="rpg-bar-row">
+                    <span class="rpg-bar-label">Code</span>
+                    <div class="rpg-bar">
+                        <div class="rpg-bar-fill code"></div>
+                    </div>
+                </div>
+                <div class="rpg-bar-row">
+                    <span class="rpg-bar-label">Audio</span>
+                    <div class="rpg-bar">
+                        <div class="rpg-bar-fill audio"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rpg-notes">
+               Skills: Full stack Developer · Producción musical
+            </div>
+        </div>
+    </div>
+
+    <div class="social-links">
+    <a href="https://www.instagram.com/tatuara/" target="_blank" class="social instagram">
+        <span>Instagram</span>
+    </a>
+
+    <a href="https://open.spotify.com/intl-es/artist/0GdD0GHHhjeYTuEIXW7Fwz?si=ibgFo1SnTKm1eJT4mb9uBA"
+       target="_blank" class="social spotify">
+        <span>Spotify</span>
+    </a>
+
+    <a href="https://soundcloud.com/tatuara" target="_blank" class="social soundcloud">
+        <span>SoundCloud</span>
+    </a>
+    </div>
+
+</section>
+
+<!-- Música -->
+<section id="musica" class="section music-section">
+    <h2>Música</h2>
+
+    <div class="music-carousel">
+        <button class="mc-arrow left" aria-label="Tema anterior">◀</button>
+
+        <div class="mc-stage">
+            <div class="mc-item" data-spotify="https://open.spotify.com/intl-es/album/2BE4SgSdD1hQIpt3DVCxUS?si=ZadfFiWCQmqUEWaDK0a8mw">
+                <img alt="Track 1">
+            </div>
+            <div class="mc-item" data-spotify="https://open.spotify.com/intl-es/album/6wRPzpyi08Bvi8pAJ6G0Lb?si=WYw1BvMtRfioZK1V1yObNQ">
+                <img alt="Track 2">
+            </div>
+            <div class="mc-item" data-spotify="https://open.spotify.com/intl-es/album/6PiQof8UgZudBmLHWJaPXl?si=79_q5g1FRC-F4I_rRVkJeg">
+                <img alt="Track 3">
+            </div>
+            <!-- puedes agregar más mc-item con data-spotify -->
+        </div>
+
+        <button class="mc-arrow right" aria-label="Tema siguiente">▶</button>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contact-section">
+    <h2>Contacto</h2>
+
+    <div class="contact-card">
+        <p class="contact-intro">
+            Si quieres colaborar, producir música, desarrollar un proyecto digital
+            o simplemente conversar, escríbeme:
+        </p>
+
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/xanzklyd"
+            method="POST"
+        >
+
+            <div class="field">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+            </div>
+
+            <div class="field">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <!-- Opcional: asunto por defecto -->
+            <input type="hidden" name="_subject" value="Contacto desde portafolio web">
+
+            <button type="submit" class="contact-button">
+                Enviar mensaje
+            </button>
+        </form>
+    </div>
+</section>
+
 </main>
 
+<footer class="site-footer">
+    <div class="footer-inner">
+        <span class="footer-text">© 2025 Tatu Vergara</span>
+        <span class="footer-text">Hecho con HTML, CSS y JS</span>
+    </div>
+</footer>
 
 </body>
 </html>
