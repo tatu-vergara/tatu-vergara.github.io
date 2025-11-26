@@ -951,63 +951,18 @@ main p {
     background: #9dd9e8;
 }
 
-/* ===== RESPONSIVE: Sección Sobre mí ===== */
+/* ===== Responsive: RRSS en móvil ===== */
 @media (max-width: 720px) {
 
-    /* El panel RPG deja de ser horizontal */
-    .rpg-panel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        /* evita scroll horizontal */
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    /* Imagen más chica y centrada */
-    .rpg-portrait {
-        width: 120px !important;
-        height: auto;
-        margin-bottom: 16px;
-    }
-
-    .rpg-portrait img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        image-rendering: pixelated;
-    }
-
-    /* Ajustar el bloque de texto si existe */
-    .rpg-text {
-        max-width: 95%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* Los stats/ cajas interiores apilados */
-    .rpg-stats {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Botones o enlaces sociales */
     .social-links {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin-top: 16px;
+        flex-direction: column;      /* apila los botones */
+        align-items: center;         /* centra la columna */
+        gap: 10px;                   /* un pelín menos de espacio */
     }
 
     .social {
-        width: 85%;
-        justify-content: center; 
+        width: 90%;                  /* cada botón casi todo el ancho */
+        max-width: 320px;            /* pero no infinito */
+        justify-content: center;
     }
 }
