@@ -18,9 +18,9 @@ body {
     /* Azul pastel arriba → amarillo pastel abajo */
     background: linear-gradient(
         to bottom,
-        #d9f2ff 0%,   /* azul muy clarito */
-        #f7f3d9 50%,  /* transición cremita */
-        #ffe9b8 100%  /* amarillo pastel */
+        #d9f2ff 0%,   
+        #f7f3d9 50%,  
+        #ffe9b8 100%  
     );
 
     color: #4a4a4a;
@@ -45,8 +45,10 @@ body {
 
     padding: 8px 16px;
     transition: padding 0.15s ease-out;
-    
+
 }
+
+
 
 .top-nav.is-scrolled {
     padding: 4px 16px;
@@ -60,6 +62,7 @@ body {
     justify-content: space-between;
     gap: 16px;
 }
+
 
 /* ---------------- BRAND ---------------- */
 
@@ -110,10 +113,10 @@ body {
     letter-spacing: 0.12em;
 
     color: #4a326f;
-    background: #e4cffd;          /* lavanda suave */
+    background: #e4cffd;          
 
     border: 2px solid #f6ecff;
-    border-radius: 6px;           /* chip suave */
+    border-radius: 6px;           
 
     box-shadow:
         0 0 0 2px #c6a5f2,
@@ -128,7 +131,7 @@ body {
 
 /* Hover: se “levanta” y brilla un poco */
 .nav-link:hover {
-    background: #f7b7f0;          /* rosado pastel */
+    background: #f7b7f0;         
     color: #5d1e63;
 
     transform: translateY(-3px);
@@ -299,6 +302,19 @@ body {
         5px 5px 0 #a650ae;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("imgs/clouds-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity: 0.25;     
+    mix-blend-mode: screen;
+    image-rendering: pixelated;
+}
 
 /* ---------------- CONTENIDO DEMO ---------------- */
 
@@ -363,7 +379,7 @@ main p {
     padding: 5rem 1.5rem;
     max-width: 960px;
     margin: 5rem auto;
-    scroll-margin-top: 90px; /* deja espacio para el header sticky */
+    scroll-margin-top: 90px; 
     text-align: center;
     position: relative;
     z-index: 1;
@@ -408,7 +424,7 @@ main p {
 }
 
 .rpg-portrait {
-    width: 110px;            /* tamaño ideal estilo FF7 */
+    width: 110px;            
     height: 145px;           /* proporción 3:4 */
     overflow: hidden;
     border: 3px solid #b9ccff;
@@ -418,7 +434,7 @@ main p {
         0 0 0 2px #4a5ea8,
         3px 3px 0 0 #1e2759;
 
-    background: #fff0;       /* lo dejamos transparente */
+    background: #fff0;       /* transparente */
 }
 
 .rpg-portrait img {
@@ -426,7 +442,7 @@ main p {
     height: 100%;
     object-fit: cover;
     image-rendering: pixelated;
-    filter: pixelate(14px); /* 🔥 ajusta este valor */
+    filter: pixelate(14px); /
 }
 /* Texto y encabezado */
 
@@ -493,7 +509,7 @@ main p {
 .rpg-bar-fill.gestion {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, #a78bfa, #c4b5fd); /* lavanda pastel */
+    background: linear-gradient(90deg, #a78bfa, #c4b5fd); 
 }
 
 
@@ -584,7 +600,69 @@ main p {
     gap: 12px;
 }
 
-/* Botones de flecha pastel retro */
+/* ===========================
+   SECCIÓN MÚSICA 
+   =========================== */
+
+.music-section {
+    text-align: center;
+}
+
+/* Panel grande tipo SNES, similar a contact-card / project-card */
+.music-panel {
+    max-width: 860px;
+    margin: 16px auto 0;
+    padding: 18px 22px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(248, 234, 255, 0.96),
+        rgba(255, 248, 230, 0.96)
+    );
+    border: 3px solid #f3e8ff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 0 2px #c7a8ff,
+        4px 4px 0 0 #8c53c1;
+}
+
+/* Header dentro del panel: título + mini texto */
+.music-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.mp-title {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #5c33a0;
+}
+
+.mp-subtitle {
+    font-size: 11px;
+    color: #6d5c8f;
+    opacity: 0.9;
+}
+
+.music-panel-body {
+    padding-top: 4px;
+}
+
+/* Carrusel */
+.music-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Botones de flecha */
 .mc-arrow {
     background: #d8b4fe;
     border: 2px solid #f3e8ff;
@@ -596,17 +674,21 @@ main p {
     font-size: 10px;
     cursor: pointer;
     color: #4a326f;
-    transition: transform 0.1s steps(2, end), box-shadow 0.1s steps(2, end);
+    transition:
+        transform 0.1s steps(2, end),
+        box-shadow 0.1s steps(2, end),
+        background 0.1s steps(2, end);
 }
 
 .mc-arrow:hover {
     transform: translateY(-2px);
+    background: #f5a3e6;
     box-shadow:
         0 0 0 2px #d58fe3,
         4px 4px 0 0 #a650ae;
 }
 
-/* Escenario donde se ubican los ítems tipo rueda DDR */
+/* Escenario/rueda del carrusel */
 .mc-stage {
     position: relative;
     width: 520px;
@@ -614,8 +696,6 @@ main p {
     overflow: hidden;
 }
 
-/* Ítems base: todos se posicionan en el centro,
-   luego las clases pos-* los mueven */
 .mc-item {
     position: absolute;
     top: 50%;
@@ -644,12 +724,12 @@ main p {
         3px 3px 0 0 #8c53c1;
 }
 
-/* Centro (1.5x más grande) */
+/* Centro  */
 .mc-item.pos-center {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 1;
     z-index: 3;
-    cursor: pointer;        /* 👈 nuevo */
+    cursor: pointer;
 }
 
 /* Lado izquierdo */
@@ -666,30 +746,50 @@ main p {
     z-index: 2;
 }
 
-/* Fuera de la vista (resto de items) */
+/* Fuera de la vista */
 .mc-item.pos-off {
     opacity: 0;
     pointer-events: none;
     z-index: 1;
 }
 
-/* Responsive */
+/* Responsive para el carrusel */
 @media (max-width: 720px) {
     .mc-stage {
         width: 320px;
+        height: 190px;
     }
+
     .mc-item {
         width: 110px;
         height: 110px;
     }
+
     .mc-item.pos-center {
         transform: translate(-50%, -50%) scale(1.4);
     }
+
+    .music-panel {
+        padding: 14px 12px;
+    }
+
+    .music-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .mp-title {
+        font-size: 10px;
+    }
+
+    .mp-subtitle {
+        font-size: 10px;
+    }
 }
 
-/* CONTACTO */
 
-/* --------- CONTACTO --------- */
+/* CONTACTO */
 
 .contact-section h2 {
     margin-bottom: 20px;
@@ -795,7 +895,7 @@ main p {
     border: 3px solid #f3e8ff;
     border-radius: 12px;
 
-    /* separación sutil más compacta */
+    /* separación sutil */
     padding: 12px 14px;
 
     box-shadow:
@@ -804,10 +904,10 @@ main p {
 
     transition: 0.12s steps(2, end);
 
-    /* 👉 CENTRAR TODO */
+    /* CENTRAR TODO */
     text-align: center;
-    max-width: 340px;   /* evita expansión */
-    margin: 0 auto;     /* centra */
+    max-width: 340px;   
+    margin: 0 auto;    
 }
 
 .project-card:hover {
@@ -821,10 +921,10 @@ main p {
 /* ---- Grilla de las tarjetas ---- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));  /* 👈 siempre 2 columnas en grande */
-    gap: 8px;                                          /* tarjetas más juntas */
+    grid-template-columns: repeat(2, minmax(0, 1fr));  
+    gap: 8px;                                         
     justify-content: center;
-    max-width: 720px;                                  /* contenedor más estrecho */
+    max-width: 720px;                                 
     margin: 0 auto;
 }
 
@@ -860,8 +960,8 @@ main p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;                /* antes 6px */
-    margin-bottom: 12px;     /* antes 14px */
+    gap: 4px;               
+    margin-bottom: 12px;    
 }
 
 .project-tags span {
@@ -961,19 +1061,19 @@ main p {
     .social-links {
         flex-direction: column;      /* apila los botones */
         align-items: center;         /* centra la columna */
-        gap: 10px;                   /* un pelín menos de espacio */
+        gap: 10px;                   /* menos espacio */
     }
 
     .social {
         width: 90%;                  /* cada botón casi todo el ancho */
-        max-width: 320px;            /* pero no infinito */
+        max-width: 320px;           
         justify-content: center;
     }
 }
 
-/* Botón de Demo (ligeramente diferente) */
+/* Botón de Demo */
 .project-links a.demo-btn {
-    background: #ffe3ad;                     /* pastel amarillito */
+    background: #ffe3ad;                  
     color: #5a3d00;
     border-color: #fff0c9;
     box-shadow:
@@ -989,9 +1089,9 @@ main p {
 }
 
 .section-crest {
-    width: 130px;              /* antes 60px → ahora más protagonista */
-    margin: 0 auto 20px;      /* más espacio al título */
-    opacity: 0.7;             /* mucho más visible */
+    width: 130px;             
+    margin: 0 auto 20px;     
+    opacity: 0.7;            
     transition: opacity 0.2s ease, transform 0.2s ease;
     cursor: pointer;
     transition: transform 0.35s ease-out,
@@ -1002,12 +1102,11 @@ main p {
     width: 100%;
     display: block;
 
-    /* Pastelización suave y elegante */
     filter:
-        saturate(0.6)        /* reduce saturación fuerte */
-        brightness(1.20)     /* iluminación suave */
-        contrast(0.85);      /* apaga lo agresivo */
-    opacity: 0.85;           /* leve transparencia pastel */
+        saturate(0.6)      
+        brightness(1.20)    
+        contrast(0.85);      
+    opacity: 0.85;         
 }
 
 @keyframes glow-pulse-soft {
@@ -1038,52 +1137,63 @@ main p {
     animation: glow-pulse-soft 2.2s ease-in-out infinite;
 }
 
-.section-crest2 {
-    width: 90px;              /* antes 60px → ahora más protagonista */
-    margin: 0 auto 20px;      /* más espacio al título */
-    opacity: 0.7;             /* mucho más visible */
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
-    transition: transform 0.35s ease-out,
-                filter 0.35s ease-out;
+/* Dinamismo extra: el cover central responde más al hover */
+.mc-item.pos-center:hover {
+    transform: translate(-50%, -50%) scale(1.40) rotate(0deg);
+    transition:
+        transform 0.22s ease-out,
+        box-shadow 0.22s ease-out;
 }
 
-.section-crest2 img {
-    width: 100%;
-    display: block;
-
-    /* Pastelización suave y elegante */
-    filter:
-        saturate(0.6)        /* reduce saturación fuerte */
-        brightness(1.20)     /* iluminación suave */
-        contrast(0.85);      /* apaga lo agresivo */
-    opacity: 0.85;           /* leve transparencia pastel */
+.mc-item.pos-center img {
+    transition: filter 0.22s ease-out;
 }
 
-@keyframes glow-pulse-soft {
-    0% {
-        transform: scale(1.00);
-        filter:
-          brightness(1.12)
-          drop-shadow(0 0 8px rgba(255, 200, 255, 0.25))
-          drop-shadow(0 0 14px rgba(200, 160, 255, 0.18));
-    }
-    50% {
-        transform: scale(1.03);
-        filter:
-          brightness(1.18)
-          drop-shadow(0 0 11px rgba(255, 200, 255, 0.33))
-          drop-shadow(0 0 18px rgba(200, 160, 255, 0.24));
-    }
-    100% {
-        transform: scale(1.00);
-        filter:
-          brightness(1.12)
-          drop-shadow(0 0 8px rgba(255, 200, 255, 0.25))
-          drop-shadow(0 0 14px rgba(200, 160, 255, 0.18));
-    }
+/* ========= BARRA SNES PARA TÍTULOS DE SECCIÓN ========= */
+
+.section h2 {
+    position: relative;
+    display: inline-block;
+
+    margin: 0 auto 32px;
+    padding: 10px 26px 12px;
+
+    font-family: "Press Start 2P", system-ui;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+
+    color: #4a326f;
 }
 
-.section-crest2:hover {
-    animation: glow-pulse-soft 2.2s ease-in-out infinite;
+/* Barra pastel tipo HUD detrás del texto */
+.section h2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #f8e0ff, #ffe8c4);
+    border: 3px solid #f3e8ff;
+
+    box-shadow:
+        0 0 0 2px #c7a8ff,
+        4px 4px 0 0 #8c53c1;
+
+    z-index: -1;
 }
+
+/* Línea inferior tipo “separador” SNES */
+.section h2::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -7px;
+    height: 3px;
+
+    background: linear-gradient(90deg, #b38ce5, #fbbf77);
+    opacity: 0.75;
+}
+
